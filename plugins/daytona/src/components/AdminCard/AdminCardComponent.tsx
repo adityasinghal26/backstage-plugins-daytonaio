@@ -39,13 +39,13 @@ export const AdminCardComponent = ({ isOwner, isUserAdmin }: AdminCardComponentP
             <Grid container spacing={3}>
                 {isUserAdmin && (
                     <Grid item md={4}>
-                        <AdminTabCard name="Users" desc="Manage users" path='users'/>
+                        <AdminTabCard name="Users" desc="Manage users"/>
                     </Grid>
                 )}
                 {isOwner && (
                     <>
                         <Grid item md={4}>
-                            <AdminTabCard name="Users" desc="Manage users and their roles" path='users'/>
+                            <AdminTabCard name="Users" desc="Manage users and their roles"/>
                         </Grid>
                         <Grid item md={4}>
                             <AdminTabCard name="Teams" desc="Manage teams and their applied quotas" path='teams'/>

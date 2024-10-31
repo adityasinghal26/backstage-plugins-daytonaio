@@ -11,7 +11,8 @@ type AdminTabCardProps = {
     desc: string;
 
     // The redirect path of the card
-    path: string;
+    // defaults to /
+    path?: string;
 };
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -35,7 +36,7 @@ export const AdminTabCard = ({name, desc, path}: AdminTabCardProps) => {
     const classes = useStyles();
     const config = useApi(configApiRef);
     const daytonaHost = config.getString('daytona.domain');
-    const redirectUrl = `https://admin.${daytonaHost}/${path}`;
+    const redirectUrl = path ? `https://admin.${daytonaHost}/${path}`: `https://admin.${daytonaHost}`
 
     return (
         <Card className={classes.card} onClick={() => openInNewTab(`${redirectUrl}`)}>
