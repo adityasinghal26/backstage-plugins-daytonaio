@@ -1,5 +1,11 @@
 # @daytonaio/backstage-plugin-daytona
 
+## 0.2.11
+
+### Patch Changes
+
+- Fix `Users` tab URI from `/users` to `/` in `Daytona` Menu page
+
 ## 0.2.10
 
 ### Patch Changes
